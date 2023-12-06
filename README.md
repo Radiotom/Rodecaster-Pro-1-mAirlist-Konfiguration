@@ -1,8 +1,5 @@
 # Rodecaster-Pro-1-mAirlist-Konfiguration
 Hier möchte ich meine Konfiguration mit euch teilen in der ich mAirList mit dem Rodecaster Pro 1 erfolgreich betreibe. 
-# Rodecaster-Pro-1-mAirlist-Konfiguration
-Hier möchte ich meine Konfiguration mit euch teilen in der ich mAirList mit dem Rodecaster Pro 1 erfolgreich betreibe. 
-
 Inhalt Liesmich.txt
 Stellt vor dem Import der Dateien und Funktionen sicher, das ihr die MIDI Funktion eures Rodecasters aktiviert habt!
 
