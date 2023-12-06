@@ -1,0 +1,40 @@
+// Faderstart Scpript copyright by Tondose (mAirList Community Forum https://community.mairlist.com/t/fernsteuerung-ein-und-aus-schalten/16752
+// 06.02.2023 nach wunsch von TomJumbo83 mittels erweiterten Button geziehlte Fernsteuerungen AN und AUS zu schalten.
+// Erweiterung auf Rode Rodecaster möglich als Fernsteuerung Command: FADERSTARTA der jeweiligen Midi Note zuweisen.
+
+var
+  MidiOn: boolean;
+ 
+function Remote(Index: integer): IRemote;
+begin
+   Result := Instance.GetRemoteController.GetItem(Index);
+end;
+  
+procedure OnLoad; 
+begin               					// Falls bei Programmstart Faderstart ausgeschaltet sein soll, …
+  MidiOn :=  false;  
+  Remote(0).SetEnabled(false); 			//für Programmstart AUS auf "false" ändern
+  ExecuteCommand('BUTTON.FADERSTARTA OFF'); 	//für Programmstart AUS auf "OFF" ändern 
+end;
+
+procedure OnExecuteCommand(Command:string);
+begin
+  if Command = 'FADERSTARTA' then			// Command für FADERSTARTA (Player A)
+  begin
+    if MidiOn then
+    begin
+      MidiOn := false;
+      Remote(0).SetEnabled(false); 			// Die Nummern in der Klammer definieren die Position der Fernsteuerungen in mAirList beginnend mit (0),(1),(2)..usw.
+	ExecuteCommand('BUTTON.FADERSTARTA OFF');
+     end
+    else
+    begin
+      MidiOn := true;
+      Remote(0).SetEnabled(true);			// Die Nummern in der Klammer definieren die Position der Fernsteuerungen in mAirList beginnend mit (0),(1),(2)..usw.
+	ExecuteCommand('BUTTON.FADERSTARTA ON');
+     end;
+  end;
+end;
+
+begin
+end.
