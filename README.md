@@ -35,10 +35,14 @@ Quell-Ordner .../mAirListconfigs of Rodecaster Pro1/Remotecommands/ 		///WICHTIG
 
 Diese Reihenfolge und Separierung der Faderstartfunktion ist wichtig und ist Teil der Funktion
 die den Faderstart ein und ausschalten kann.
-Danach muss in der Fernsteuerung folgende Reihenfolge stehen: 
+Danach muss in der Fernsteuerung folgende Reihenfolge stehen:
+
 [ ] MIDI 					///Inhalt: MidiFaderstartRemotePlayerA.ini
+
 [ ] MIDI 					///Inhalt: MidiFaderstartRemotePlayerB.ini
+
 [ ] MIDI 					///Inhalt: MidiFaderstartRemoteCart1.ini
+
 [X] MIDI 					///INhalt: MidiRemoteRodecaster1General.ini
 
 Solltet ihr noch andere Fernsteuerungen besitzen, diese bitte an Ende der Liste ziehen.
